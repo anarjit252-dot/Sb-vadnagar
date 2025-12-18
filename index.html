@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butterfield | Premium Hudson Valley</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #0A457A;
+            --accent-gold: #C5A059;
+            --text-dark: #1A1A1A;
+            --max-width: 1200px; /* Sab kuch is line ke andar rahega */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Lato', sans-serif; 
+            color: var(--text-dark); 
+            line-height: 1.6; 
+            background: #ffffff;
+            overflow-x: hidden; /* Page bahar nahi jayega */
+        }
+
+        /* Container for perfect alignment */
+        .wrapper {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* HEADER - Static (Scroll ke sath jayega) */
+        header { 
+            padding: 40px 0;
+            background: #fff;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .logo-hd span { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 2.5rem; 
+            font-weight: 700; 
+            letter-spacing: 6px; 
+            color: #000;
+        }
+        .logo-hd small { 
+            display: block; 
+            font-size: 0.8rem; 
+            letter-spacing: 5px; 
+            text-transform: uppercase; 
+            color: var(--accent-gold);
+            margin-top: 5px;
+        }
+
+        /* HERO - Balanced Height */
+        .hero { 
+            height: 75vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 4rem; }
+
+        /* SECTIONS WITH PERFECT GAPS */
+        section { padding: 100px 0; }
+        
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-family: 'Playfair Display', serif; font-size: 2.8rem; }
+        .divider { width: 50px; height: 3px; background: var(--accent-gold); margin: 20px auto; }
+
+        /* GRID GALLERY - LOCKED INSIDE CONTAINER */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 80px;
+        }
+        .gallery img { 
+            width: 100%; 
+            height: 400px; 
+            object-fit: cover; 
+            border-radius: 2px;
+            transition: 0.4s;
+        }
+        .gallery img:hover { transform: scale(1.02); }
+
+        /* SPLIT CONTENT (Left/Right) */
+        .split { 
+            display: flex; 
+            align-items: center; 
+            gap: 60px; 
+            margin-bottom: 100px;
+        }
+        .split-img { flex: 1.2; height: 550px; }
+        .split-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; }
+        .split-info { flex: 1; }
+        .split-info h3 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 20px; }
+
+        /* HAPPY HOUR BOX - NO OVERFLOW */
+        .happy-box {
+            background: var(--primary-blue);
+            color: #fff;
+            padding: 80px 40px;
+            text-align: center;
+            border-radius: 4px;
+            margin-bottom: 80px;
+        }
+
+        /* TIMINGS GRID */
+        .timing-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .time-item {
+            background: #fcfcfc;
+            padding: 40px 20px;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+        .time-item h4 { font-family: 'Playfair Display', serif; margin-bottom: 10px; }
+        .time-item span { color: var(--primary-blue); font-weight: 700; font-size: 1.2rem; }
+
+        /* FOOTER */
+        footer { background: #000; color: #888; padding: 100px 0 40px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 80px; }
+        .social-link { font-size: 1.8rem; color: #fff; text-decoration: none; margin-right: 20px; }
+
+        /* MOBILE FIXES */
+        @media (max-width: 900px) {
+            .wrapper { padding: 0 20px; }
+            .gallery, .timing-grid, .footer-grid { grid-template-columns: 1fr; }
+            .split { flex-direction: column; gap: 30px; }
+            .hero h1 { font-size: 2.5rem; }
+            .split-img { height: 350px; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="wrapper">
+            <div class="logo-hd">
+                <span>BUTTERFIELD</span>
+                <small>Hasbrouck House</small>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="wrapper">
+            <h1>Farm-to-Table Experience</h1>
+            <p style="margin-top: 20px; font-size: 1.2rem;">Authentic flavors from the heart of Hudson Valley.</p>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        
+        <section>
+            <div class="section-header">
+                <h2>The Art of Dining</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80">
+            </div>
+
+            <div class="split">
+                <div class="split-img">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=800&q=80">
+                </div>
+                <div class="split-info">
+                    <h3>Seasonal Kitchen</h3>
+                    <p>Our chef works closely with local Stone Ridge farms to create a menu that changes with the harvest. Experience fresh, organic, and sustainable dining at its best.</p>
+                    <br>
+                    <a href="mailto:info@butterfieldstoneridge.com" style="color: var(--accent-gold); font-weight: bold; text-decoration: none; border-bottom: 2px solid;">CONTACT US TO BOOK &rarr;</a>
+                </div>
+            </div>
+
+            <div class="split" style="flex-direction: row-reverse;">
+                <div class="split-img">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80">
+                </div>
+                <div class="split-info">
+                    <h3>Curated Bar</h3>
+                    <p>Discover a wide selection of local spirits, craft beers, and wines selected from the finest vineyards of the Hudson Valley.</p>
+                    <br>
+                    <a href="https://www.instagram.com/butterfieldstoneridge?igsh=MW9yZ3dkdXh5NDVkag==" target="_blank" style="color: var(--accent-gold); font-weight: bold; text-decoration: none; border-bottom: 2px solid;">FOLLOW ON INSTAGRAM &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="happy-box">
+            <h2 style="font-family: 'Playfair Display'; font-size: 3rem; margin-bottom: 10px;">Happy Hour</h2>
+            <p style="font-size: 1.4rem; letter-spacing: 2px; font-weight: 300;">MON - THU | 4:00 PM - 6:00 PM</p>
+            <p style="margin-top: 20px; opacity: 0.8;">Join us for special prices on cocktails and appetizers.</p>
+        </div>
+
+        <section>
+            <div class="section-header">
+                <h2>Our Hours</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="timing-grid">
+                <div class="time-item">
+                    <h4>Breakfast</h4>
+                    <span>6AM - 11AM</span>
+                    <p style="font-size: 0.7rem; margin-top: 5px;">OPEN DAILY</p>
+                </div>
+                <div class="time-item">
+                    <h4>Lunch</h4>
+                    <span>11AM - 3PM</span>
+                    <p style="font-size: 0.7rem; margin-top: 5px;">FRI & SAT</p>
+                </div>
+                <div class="time-item">
+                    <h4>Dinner</h4>
+                    <span>5PM - 9PM</span>
+                    <p style="font-size: 0.7rem; margin-top: 5px;">OPEN DAILY</p>
+                </div>
+                <div class="time-item">
+                    <h4>Bar</h4>
+                    <span>3PM - 9PM</span>
+                    <p style="font-size: 0.7rem; margin-top: 5px;">OPEN DAILY</p>
+                </div>
+            </div>
+        </section>
+
+    </div> <footer>
+        <div class="wrapper">
+            <div class="footer-grid">
+                <div>
+                    <h3 style="color: #fff; font-family: 'Playfair Display'; font-size: 2rem; margin-bottom: 20px;">BUTTERFIELD</h3>
+                    <p>Modern Hudson Valley cuisine at Hasbrouck House.</p>
+                    <div style="margin-top: 30px;">
+                        <a href="https://www.instagram.com/butterfieldstoneridge?igsh=MW9yZ3dkdXh5NDVkag==" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:info@butterfieldstoneridge.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 20px;">LOCATION</h4>
+                    <p>3805 Main Street<br>Stone Ridge, NY 12484</p>
+                    <p style="margin-top: 15px;">(845) 687-0887</p>
+                </div>
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 20px;">QUICK LINKS</h4>
+                    <a href="#">Our Story</a>
+                    <a href="#">Menus</a>
+                    <a href="#">Reservations</a>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 80px; border-top: 1px solid #222; padding-top: 30px; font-size: 0.8rem;">
+                &copy; 2025 Butterfield Restaurant & Bar. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
